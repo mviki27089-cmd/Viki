@@ -1,99 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #eef2f3;
-        }
-        header {
-            background: #2b7a78;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        nav {
-            background: #17252a;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #17252a;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-            background: #3aafa9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Olahraga Saya</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Selamat Datang di Website Saya</h1>
-        <p>Website tugas sekolah — dibuat dengan HTML & CSS</p>
-    </header>
 
-    <nav>
-        <a href="#tentang">Tentang Saya</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
+  <h1>Jadwal Olahraga</h1>
 
-    <div class="container" id="tentang">
-        <h2>Tentang Saya</h2>
-        <p><strong>Nama:</strong> Isi nama kamu di sini</p>
-        <p><strong>Kelas:</strong> Isi kelas kamu di sini</p>
-        <p><strong>Hobi:</strong> Isi hobi kamu di sini</p>
-        <p>Saya membuat website ini sebagai tugas sekolah. Website ini berisi informasi tentang diri saya, galeri foto, dan kontak yang bisa dihubungi.</p>
-    </div>
+  <div class="card">
+    <label>Nama Olahraga:</label>
+    <input id="olahraga" type="text" placeholder="Contoh: Lari, Push-up">
 
-    <div class="container" id="galeri">
-        <h2>Galeri</h2>
-        <p>Berikut beberapa gambar contoh:</p>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/300" alt="Gambar 1" />
-            <img src="https://via.placeholder.com/300" alt="Gambar 2" />
-        </div>
-    </div>
+    <label>Hari:</label>
+    <select id="hari">
+      <option>Senin</option>
+      <option>Selasa</option>
+      <option>Rabu</option>
+      <option>Kamis</option>
+      <option>Jumat</option>
+      <option>Sabtu</option>
+      <option>Minggu</option>
+    </select>
 
-    <div class="container" id="kontak">
-        <h2>Kontak</h2>
-        <p><strong>Email:</strong> contoh@email.com</p>
-        <p><strong>Instagram:</strong> @username</p>
-        <p>Silakan hubungi saya jika ingin bertanya lebih lanjut.</p>
-    </div>
+    <label>Durasi (menit):</label>
+    <input id="durasi" type="number" placeholder="Contoh: 30">
 
-    <footer>
-        &copy; 2025 Website Tugas Sekolah — Dibuat dengan HTML & CSS
-    </footer>
+    <button onclick="tambahJadwal()">Tambah Jadwal</button>
+  </div>
+
+  <h2>Daftar Jadwal</h2>
+  <div class="list" id="list"></div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
